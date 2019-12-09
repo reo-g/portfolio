@@ -1,12 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Example Portfolio</title>
+    <meta charset="utf-8">
+    <title>れおまるの自己紹介</title>
+    <!-- https://googlefonts.github.io/japanese/ -->
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script>
+            $(function(){
+              $('a[href^="#"]').click(function() {
+                var speed = 400;
+                var href= $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $('body,html').animate({scrollTop:position}, speed, 'swing');
+                return false;
+              });
+            });
+    </script>
 </head>
+
 <body>
-    <h1>Hello GitHub.io !</h1>
+    <div id="header">
+        <ul>
+            <li><a class='hvr-wobble-vertical' href="#index">トップページ</a></li>
+            <li><a class='hvr-wobble-vertical' href="#introduction">ジコショウカイ</a></li>
+            <li><a class='hvr-wobble-vertical' href="#work">さくひん</a></li>
+            <li><a class='hvr-wobble-vertical' href="#hobby">しゅみ</a></li>
+        </ul>
+    </div>
+
+    <div id="index">
+        <div id="content">
+            <h1>れおまるのPortfolioページ</h1>
+            <h3>ようこそ！</h3>
+            <img src="images/icon.png" alt="れおまる"><br>
+            <h3>こんにちは！<br>上のナビゲーションバーからジャンプしてください！</h3>
+        </div>
+    </div>
+
+    <div id="introduction"></div>
+        <div id="content">
+            <h1> 自己紹介 </h1>
+            京都大学 電気電子工学科 2回の額見 怜央(がくみ れお)と申します。<br> 広島市出身で未だに広島弁が抜けていません🙃<br>ネット上では「れおまる」というニックネームを使っています。<br>
+            <br> 電子工作などのものづくりが好きで、最近は機械学習やデータ分析に関心を持ち学習を始めました。
+            <br> セキュリティや通信技術についても学んでみたいなと興味を持っています。
+            <br> 趣味としてはものづくりだけでなく、お菓子作りや音楽を聴いたりすることも好きです。
+            <br>
+            <img src="images/saru.JPG" alt="おうちのおさるさん" width="400px">
+            <hr class="hr_custom">
+        </div>  
+    </div>
+
+    <div id="work">
+        <div id="content">
+            <h1>これまでに作った作品</h1>
+            <p>電子工作などで僕が今までに作った作品を抜粋して紹介します。</p>
+            <h2>家電と連動したインターネットを用いた見守りシステム</h2>
+            <div id='works'>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EabxZ9fB77k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 高校２年生のときに製作したデバイスです。
+                <br>Arduino互換のESP-WROOM-02(ESP8266)という<br>比較的安価に入手できるWiFiモジュールを用いることで、<br>およそ3000円程度で製作可能な見守り装置の開発に取り組みました。<br>利用者と見守る側の両方にとって使いやすいデバイスを目指して色々と試行錯誤しました。<br>いくつかの賞もいただき一番実用的な作品だったと思います(?)
+            </div>
+            <h2>オーディオスペクトラムアナライザ</h2>
+            <div id='works'>
+                <blockquote class="twitter-tweet">
+                    <p lang="ja" dir="ltr">回路演習なんとか動きました <a href="https://t.co/wHUNm6fAq3">pic.twitter.com/wHUNm6fAq3</a></p>&mdash; れおまる (@_reo_g) <a href="https://twitter.com/_reo_g/status/1149220575539159040?ref_src=twsrc%5Etfw">July 11, 2019</a></blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <br>2回後期の電気電子回路演習の最終課題で製作しました。<br>12バンド×ステレオ2ch(LR)のオーディオスペクトラムアナライザです。<br> マイコンにはESP32を用いてLEDマトリックスも製作しました。<br>NeoPixel WS2812BのおかげでLEDの制御はソフトで頑張れます。<br>電源装置を下宿から持ってこないといけないほど電流を食うのが難点です。<br>いつか立て看サイズのフルカラーLED看板を製作したいですね!!
+            </div>
+            <h2>エアホッケーロボット</h2>
+            <div id='works'>
+                <blockquote class="twitter-tweet">
+                    <p lang="ja" dir="ltr">エアホッケーロボットもようやくまともになってまいりました😌<br>優しい京大生の方々は対戦の際は優しく対戦してあげてください(切実 <a href="https://t.co/JkAky6UxDU">pic.twitter.com/JkAky6UxDU</a></p>&mdash; れおまる (@_reo_g) <a href="https://twitter.com/_reo_g/status/1066018735763247104?ref_src=twsrc%5Etfw">November 23, 2018</a></blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <br>2018年度の第60回11月祭の機械研究会ブースでの展示で、<br>1回生有志で共同製作を行ったエアホッケーロボットです。<br>Webカメラによる画像認識で得た座標点を元に、<br>マレットを制御しパックを打ち返します。<br><br>短期開発でのロボット製作の苦しさと<br>無邪気な子供の怖さを思い知ったNFでした...<br>
+            </div>
+            <h2>リコーダー自動演奏ロボット</h2>
+            <div id='works'>
+                <blockquote class="twitter-tweet">
+                    <p lang="ja" dir="ltr">MIDI信号に連動した全自動リコーダーロボットを製作しました ものづくりに興味がある方機械研にぜひ遊びに来てください🙃🙃 <a href="https://t.co/VcSd7Dknjg">pic.twitter.com/VcSd7Dknjg</a></p>&mdash; れおまる (@_reo_g) <a href="https://twitter.com/_reo_g/status/1119184831567421442?ref_src=twsrc%5Etfw">April 19, 2019</a></blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <br>2019年度の機械研究会の新歓ロボットとして共同製作したものです。<br>マイコン制御含めたソフト全般/回路の一部を担当しました。<br>PCからのMIDI信号をUSB-MIDIとしたArduinoで受け取り、<br>信号の音階に対応した運指にサーボモータを制御しています。<br><br>
+            </div>
+            <h2>Bitcoin Price Ticker</h2>
+            <div id='works'>
+                <img src="images/ticker.jpeg" alt="Bitcoin Price Ticker" width="560" height="315"> 　中学３年生のときに作ったデバイスです。<br>Arduino UNO + Arduino Ethernet Shield R3で、<br>インターネット経由でBitcoinの価格を取得し表示させています。<br>蛍光表示管(VFD)の光がとても美しいので気に入っていました。<br>この頃に戻ってビットコインをたくさん買っていれば、<br>今頃お金持ちだったでしょうね....
+            </div>
+            <h2>音割れポッター with BadUSB</h2>
+            <div id='works'>
+                <blockquote class="twitter-tweet">
+                    <p lang="ja" dir="ltr">京大音割れポッター同好会リスペクトを込めて全自動音割れポッターwith BadUSBを開発しました<br>自動ダウンロードにより任意のパソコンに接続するだけで音源が音量MAXで再生されます👍<br>いつでもどこでも音割れポッターが可能です🐱 <a href="https://t.co/yQyLxAJHyS">pic.twitter.com/yQyLxAJHyS</a></p>&mdash; れおまる (@_reo_g) <a href="https://twitter.com/_reo_g/status/1198932054479532032?ref_src=twsrc%5Etfw">November 25, 2019</a></blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <br>Digisparkマイコンを使用して<br>任意のPCで音割れポッターを流すBadUSB(?)です。<br>HIDデバイスのキーボードとして認識されます。<br><br>Powershellでps1ファイルを自動で実行後、<br>Windowsシステムの音量を強制的に100%に設定し、<br>Web上から自動で音源をダウンロードし<br>再生してくれる親切なとても仕様です。<br>
+            </div>
+            <hr class="hr_custom">
+        </div>
+    </div>
+
+    <div id="hobby">
+        <div id="content">
+            <h1>僕の趣味をいくつか紹介します！</h1>
+            <div id="content-left">
+                <h2>プログラミングや電子工作</h2>
+                <div id="details">
+                    <img src="images/led.jpeg" alt="フルカラーLED" height="350">
+                    <div id="desc">
+                        アマチュア無線をきっかけとしてラジオなどの電子工作をはじめ、<br>今はちょっとしたプログラミングやモノづくりを楽しんでいます。<br> PythonやCをメインとして、HTMLやCSS,Javascriptなども勉強していますがまだまだ何もわからない初心者です。
+                        <br> 今は機械学習やデータ分析に関心を持っているのでPythonによるデータ解析とSQLをかじっているところです。<br><br>電子工作ではハードとソフト両方でのものづくりが好きです。<br>いくつか作品を抜粋して紹介しています！
+                    </div>
+                </div>
+                <h2>お菓子作り</h2>
+                <div id="details">
+                    <img src="images/cheese.jpeg" alt="チーズケーキ" height="350">
+                    <div id="desc">
+                        スイーツは好きなのでお菓子作りもちょっとした趣味です。<br>チーズケーキは失敗しにくく美味しいのでよく作っています。<br>タルトタタンやクレームブリュレ,クッキーなどを作ってみました。<br><br> 最近は僕が好きなカヌレにも挑戦しています。
+                        <br>残念ながら何度やってもパリパリとした食感が得られないので、<br>家庭用オーブンレンジの限界と格闘しています...<br>
+                    </div>
+                </div>
+                <h2>音楽</h2>
+                <div id="details">
+                    <iframe src="https://open.spotify.com/embed/track/1dkv0NgGbnrPiCrEa0iOA7" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <div id="desc">
+                        最近はSpotifyで音楽を広く浅く色々と聞いています。<br>サカナクションがとても好きです！！！<br>特に好きな曲は「夜の東側」「アドベンチャー」<br>「聴きたかったダンスミュージック、リキッドルームに」です！！！
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <hr class="hr_custom">
+        <ul class="sns">
+            <li>
+                <a href="https://twitter.com/_reo_g"><i class="fab fa-twitter-square fa-5x"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/reo-g"><i class="fab fa-github-square fa-5x"></i></a>
+            </li>
+            <li>
+                <a href="https:/instagram.com/reo_g"><i class="fab fa-instagram fa-5x"></i></a>
+            </li>
+        </ul>
+    </div>
 </body>
+
 </html>
