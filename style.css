@@ -92,10 +92,12 @@ h2:before {
 
 #works {
     display: flex;
+    justify-content: center;
 }
 
 #details {
     display: flex;
+    justify-content: center;
 }
 
 .sns {
