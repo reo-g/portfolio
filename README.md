@@ -1,4 +1,3 @@
 # reo-g.github.io
 
-ポートフォリオ用レポジトリ
-reomaru.comに転送
+ポートフォリオ用レポジトリでreomaru.comに転送
